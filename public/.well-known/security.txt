@@ -1,0 +1,4 @@
+Contact: mailto:contact@loketspoor.nl
+Expires: 2027-09-30T00:00:00.000Z
+Preferred-Languages: nl, en
+Canonical: https://loketspoor.nl/.well-known/security.txt
