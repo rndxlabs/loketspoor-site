@@ -121,6 +121,10 @@ address {
   font-style: normal;
 }
 
+.bijgewerkt {
+  color: var(--secundair);
+}
+
 .kernpunten {
   padding-inline-start: 1.25rem;
 }
