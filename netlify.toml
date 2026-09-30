@@ -1,0 +1,39 @@
+[build]
+  publish = "public"
+
+# www stuurt door naar loketspoor.nl (expliciet, naast Netlify's eigen alias-doorverwijzing)
+[[redirects]]
+  from = "https://www.loketspoor.nl/*"
+  to = "https://loketspoor.nl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.loketspoor.nl/*"
+  to = "https://loketspoor.nl/:splat"
+  status = 301
+  force = true
+
+# Het netlify.app-adres stuurt ook door. Wordt de projectnaam loketspoor-nl, pas dit dan aan.
+[[redirects]]
+  from = "https://loketspoor.netlify.app/*"
+  to = "https://loketspoor.nl/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000"
+    Content-Security-Policy = "default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), browsing-topics=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+
+[[headers]]
+  for = "/.well-known/security.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
