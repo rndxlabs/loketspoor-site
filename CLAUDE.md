@@ -1,3 +1,5 @@
+Taak: loketspoor-site
+
 # CLAUDE.md
 
 Statische website voor loketspoor.nl. Gewone HTML en CSS in `public/`, zonder build-stap en zonder `package.json`. Hosting via Netlify; instellingen, doorverwijzingen en beveiligingsheaders staan in `netlify.toml`.
